@@ -19,7 +19,7 @@ APYDataGridBundle
 # Start the project
 
 ```bash
-$ git clone ...
+$ git clone https://github.com/npotier/apydatagrid-demo.git
 $ cd apydatagrid-demo
 $ symfony composer install
 $ symfony console doctrine:migrations:migrate  
