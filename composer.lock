@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "../APYDataGridBundle",
-                "reference": "06ae93952d4abc988a513d9e56fdb25d6f41e7f8"
+                "reference": "f569a54dd3c4645def6a1c005eec1320f03c7319"
             },
             "require": {
                 "php": ">=7.2",
@@ -6862,8 +6862,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
-    "platform-dev": {
-        "php": "*"
-    },
+    "platform-dev": [],
     "plugin-api-version": "2.0.0"
 }
