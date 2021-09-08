@@ -2,6 +2,11 @@
 
 This is a simple **Symfony 5** project that allows to test locally the APYDatagridBundle project
 
+it has 2 branches: 
+
+* `main` : Symfony **5.3**
+* `sf4` : Symfony **4.4**
+
 # How does it works
 
 The `composer.json` file declares the bundle as a local source.
