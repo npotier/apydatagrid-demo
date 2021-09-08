@@ -42,9 +42,9 @@ class AuthorController extends AbstractController
             return $this->redirectToRoute('author_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('author/new.html.twig', [
+        return $this->render('author/new.html.twig', [
             'author' => $author,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 
@@ -72,9 +72,9 @@ class AuthorController extends AbstractController
             return $this->redirectToRoute('author_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('author/edit.html.twig', [
+        return $this->render('author/edit.html.twig', [
             'author' => $author,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 

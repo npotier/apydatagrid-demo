@@ -148,6 +148,9 @@
             "bin/console"
         ]
     },
+    "symfony/debug": {
+        "version": "v4.4.27"
+    },
     "symfony/debug-bundle": {
         "version": "4.1",
         "recipe": {
