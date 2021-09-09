@@ -22,21 +22,12 @@ class BookController extends AbstractController
     public function index(BookRepository $bookRepository, \APY\DataGridBundle\Grid\Grid $grid): Response
     {
         $source = new Entity(Book::class);
-        // Get a Grid instance
-        //$grid = $this->get('grid');
-
         // Attach the source to the grid
         $grid->setSource($source);
-        dump($grid);
-        //die();
         return $grid->getGridResponse('book/index.html.twig',[
             'books' => [], //$bookRepository->findAll(),
         ]);
 
-        // return $this->render('book/index.html.twig', [
-        //     'books' => [], //$bookRepository->findAll(),
-        //     'grid' => $grid
-        // ]);
     }
 
     /**
