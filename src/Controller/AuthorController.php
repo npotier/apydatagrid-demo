@@ -9,22 +9,27 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use APY\DataGridBundle\Grid\Source\Entity;
+use APY\DataGridBundle\Grid\Export\CSVExport;
 /**
  * @Route("/author")
  */
 class AuthorController extends AbstractController
 {
     /**
-     * @Route("/", name="author_index", methods={"GET"})
-     */
-    public function index(AuthorRepository $authorRepository): Response
+    * @route("/", name="author_index", methods={"GET", "POST"})
+    */
+    public function index(AuthorRepository $authorRepository, \APY\DataGridBundle\Grid\Grid $grid): Response
     {
-        return $this->render('author/index.html.twig', [
+        $source = new Entity(Author::class);
+        // Attach the source to the grid
+        $grid->setSource($source);
+        $grid->addExport(new CSVExport('CSV Export', 'export'));
+        
+        return $grid->getGridResponse('author/index.html.twig',[
             'authors' => $authorRepository->findAll(),
         ]);
     }
-
     /**
      * @Route("/new", name="author_new", methods={"GET","POST"})
      */

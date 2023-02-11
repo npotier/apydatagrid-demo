@@ -4,14 +4,14 @@ This is a simple **Symfony 5** project that allows to test locally the APYDatagr
 
 it has 2 branches: 
 
-* `main` : Symfony **5.3**
+* `main` : Symfony **5.4**
 * `sf4` : Symfony **4.4**
 
 # How does it works
 
 The `composer.json` file declares the bundle as a local source.
 
-You need to have this exact directory structure
+You need to have this exact directory structure : 
 
 ```bash
 # example /Users/rian/www
@@ -19,7 +19,7 @@ $ ls
 
 apydatagrid-demo
 APYDataGridBundle
-````
+```
 
 # Start the project
 
